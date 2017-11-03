@@ -5,3 +5,4 @@ sudo: false
 cache: packages
 sudo: required
 dist: trusty
+os: linux

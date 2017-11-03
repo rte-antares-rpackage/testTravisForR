@@ -5,5 +5,6 @@ test_that("openCl",{
   cl <- makeCluster(1)
   print("After open")
   stopCluster(cl)
+
   print("After cl")
 })

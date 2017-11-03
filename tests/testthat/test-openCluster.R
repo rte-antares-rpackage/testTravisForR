@@ -1,8 +1,7 @@
 context("openCluster")
-library(doFuture)
+library(parallel)
 test_that("openCl",{
   print("Before open")
-  registerDoFuture()
   cl <- makeCluster(1)
   print("After open")
   stopCluster(cl)

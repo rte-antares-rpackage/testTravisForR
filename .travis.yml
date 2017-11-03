@@ -4,4 +4,4 @@ language: R
 sudo: false
 cache: packages
 sudo: required
-dist: trusty
+dist: precise

@@ -13,6 +13,7 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
+#' @import doFuture
 hello <- function() {
   print("Hello, world!")
 }

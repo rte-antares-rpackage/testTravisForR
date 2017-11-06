@@ -1,11 +1,11 @@
 context("openCluster")
 library(parallel)
 
-# Sys.unsetenv("R_TESTS")
+Sys.unsetenv("R_TESTS")
 
 test_that("openCl",{
   print("Before open")
-  cl <- makeCluster(1)
+  cl <- makeCluster(2)
 
   print("After open")
   stopCluster(cl)

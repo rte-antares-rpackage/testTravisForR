@@ -1,7 +1,7 @@
 context("openCluster")
 library(parallel)
 
-Sys.unsetenv("R_TESTS")
+# Sys.unsetenv("R_TESTS")
 
 test_that("openCl",{
   print("Before open")

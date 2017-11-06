@@ -1,8 +1,11 @@
 context("openCluster")
 library(parallel)
+
+Sys.unsetenv("R_TESTS")
+
 test_that("openCl",{
   print("Before open")
-  cl <- makeCluster(1, revtunnel=TRUE, master="localhost", port=11)
+  cl <- makeCluster(1)
 
   print("After open")
   stopCluster(cl)

@@ -20,5 +20,4 @@ before_install:
 #  - cd ..
 #
 install:
-  - Rscript -e 'install.packages("devtools");devtools::install_github("r-lib/pkgconfig")'
-  - Rscript -e 'install.packages("clpAPI")'
+  - Rscript -e 'library(pkgconfig);install.packages("clpAPI")'

@@ -5,3 +5,16 @@ sudo: false
 cache: packages
 sudo: required
 dist: trusty
+
+
+before_install:
+  - svn checkout https://projects.coin-or.org/svn/SYMPHONY/stable/5.6 SYMPHONY-5.6
+  - cd SYMPHONY-5.6
+  - ./configure
+  - make
+  - make install
+  - cd ..
+
+install:
+  - Rscript -e 'install.packages(c("devtools"))'
+  - Rscript -e 'devtools::install("clpApi")'

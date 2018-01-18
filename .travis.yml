@@ -15,4 +15,4 @@ before_install:
   - cd ..
 
 install:
-  - Rscript -e 'install.packages("clpAPI", configure.args = list(PKG_CPPFLAGS = "/home/travis/build/rte-antares-rpackage/testTravisForR/SYMPHONY-5.6/Clp"))'
+  - Rscript -e 'install.packages("clpAPI", configure.args = list(PKG_CPPFLAGS = "/home/travis/build/rte-antares-rpackage/testTravisForR/SYMPHONY-5.6/include/coin/"))'

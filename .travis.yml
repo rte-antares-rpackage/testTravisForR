@@ -7,7 +7,7 @@ dist: trusty
 
 
 before_install:
-  -brew outdated "pkg-config" || brew upgrade "pkg-config"
+  - brew outdated "pkg-config" || brew upgrade "pkg-config"
 
 #
 #  - svn checkout https://projects.coin-or.org/svn/Clp/stable/1.16 coin-Clp

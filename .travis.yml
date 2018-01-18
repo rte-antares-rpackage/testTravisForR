@@ -7,9 +7,9 @@ dist: trusty
 
 
 before_install:
-  - export PATH=$HOME/.linuxbrew/bin:$PATH
-  - hash -r
-  - brew outdated "pkg-config" || brew upgrade "pkg-config"
+  - LD_LIBRARY_PATH=/usr/local/lib
+  - LD_RUN_PATH=/usr/local/lib
+  - PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 #
 #  - svn checkout https://projects.coin-or.org/svn/Clp/stable/1.16 coin-Clp

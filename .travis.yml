@@ -3,11 +3,7 @@
 language: R
 cache: packages
 sudo: required
-dist: precise
-
-before_install:
-  - sudo rm -vf /etc/apt/sources.list.d/*riak*
-  - sudo apt-get update
+dist: trusty
 
 #
 #  - svn checkout https://projects.coin-or.org/svn/Clp/stable/1.16 coin-Clp

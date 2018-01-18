@@ -7,12 +7,12 @@ dist: trusty
 
 
 before_install:
-  - svn checkout https://projects.coin-or.org/svn/Cbc/releases/2.9.8 Cbc-2.9.8
-  - cd Cbc-2.9.8
+  - svn checkout https://projects.coin-or.org/svn/Clp/stable/1.16 coin-Clp
+  - cd coin-Clp
   - ./configure
   - make
   - make install
   - cd ..
 
 install:
-  - Rscript -e 'install.packages("clpAPI", configure.args = list(PKG_CPPFLAGS = "/home/travis/build/rte-antares-rpackage/Cbc-2.9.8"))'
+  - Rscript -e 'install.packages("clpAPI", configure.args = list(PKG_CPPFLAGS = "/home/travis/build/rte-antares-rpackage/coin-Clp"))'

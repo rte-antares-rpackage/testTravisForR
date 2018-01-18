@@ -15,5 +15,4 @@ before_install:
   - cd ..
 
 install:
-  - Rscript -e 'install.packages(c("devtools"))'
-  - Rscript -e 'devtools::install("clpApi")'
+  - Rscript -e 'install.packages("clpAPI")'

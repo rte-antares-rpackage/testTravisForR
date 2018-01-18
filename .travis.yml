@@ -6,16 +6,16 @@ sudo: false
 dist: trusty
 
 
-before_install:
-  - svn checkout https://projects.coin-or.org/svn/Clp/stable/1.16 coin-Clp
-  - cd coin-Clp
-  - ./configure
-  - make
-  - make install
-  - export PATH=$PATH:/home/travis/build/rte-antares-rpackage/coin-Clp
-  - export PATH=$PATH:/home/travis/build/rte-antares-rpackage/coin-Clp/include
-  - export PATH=$PATH:/home/travis/build/rte-antares-rpackage/coin-Clp/include/coin
-  - cd ..
+#before_install:
+#  - svn checkout https://projects.coin-or.org/svn/Clp/stable/1.16 coin-Clp
+#  - cd coin-Clp
+#  - ./configure
+#  - make
+#  - make install
+#  - export PATH=$PATH:/home/travis/build/rte-antares-rpackage/coin-Clp
+#  - export PATH=$PATH:/home/travis/build/rte-antares-rpackage/coin-Clp/include
+#  - export PATH=$PATH:/home/travis/build/rte-antares-rpackage/coin-Clp/include/coin
+#  - cd ..
 
 install:
-  - Rscript -e 'install.packages("clpAPI")'
+  - R CMD INSTALL --configure-args=--with-clp-lib=https://cran.r-project.org/src/contrib/Archive/clpAPI/clpAPI_1.2.6.tar.gz clpAPI

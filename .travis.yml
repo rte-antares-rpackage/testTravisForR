@@ -7,6 +7,8 @@ dist: trusty
 
 
 before_install:
+  - export PATH=$HOME/.linuxbrew/bin:$PATH
+  - hash -r
   - brew outdated "pkg-config" || brew upgrade "pkg-config"
 
 #

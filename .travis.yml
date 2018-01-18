@@ -2,8 +2,7 @@
 
 language: R
 cache: packages
-sudo: required
-dist: trusty
+os: osx
 
 #
 #  - svn checkout https://projects.coin-or.org/svn/Clp/stable/1.16 coin-Clp

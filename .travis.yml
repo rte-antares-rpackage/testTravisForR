@@ -12,7 +12,9 @@ before_install:
   - ./configure
   - make
   - make install
+  - export PATH=$PATH:/home/travis/build/rte-antares-rpackage/coin-Clp
+  - export PATH=$PATH:/home/travis/build/rte-antares-rpackage/coin-Clp/include
   - cd ..
 
 install:
-  - Rscript -e 'install.packages("clpAPI", configure.args = list(PKG_CPPFLAGS = "/home/travis/build/rte-antares-rpackage/coin-Clp/include"))'
+  - Rscript -e 'install.packages("clpAPI")'

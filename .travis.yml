@@ -6,10 +6,8 @@ sudo: required
 dist: trusty
 
 before_install:
-  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
   - sudo apt-get install coinor-clp
-  - sudo apt-get update
-  - sudo apt-get upgrade
+  - sudo apt-get install coinor-libclp-dev
 
 install:
   - Rscript -e 'install.packages("clpAPI", configure.args=list("--with-clp-include" = "/home/travis/build/rte-antares-rpackage/coin-Clp", "--with-clp-lib" = "/home/travis/build/rte-antares-rpackage/coin-Clp/lib"))'

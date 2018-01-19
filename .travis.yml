@@ -5,13 +5,14 @@ cache: packages
 sudo: false
 dist: trusty
 
+
 before_install:
- - git clone --branch=stable/2.9 https://github.com/coin-or/Cbc Cbc-2.9
- - cd Cbc-2.9
-# - git clone --branch=stable/0.8 https://github.com/coin-or-tools/BuildTools/
- - ./configure
- - make
- - make install
+  - svn checkout https://projects.coin-or.org/svn/Clp/stable/1.16 coin-Clp
+  - cd coin-Clp
+  - ./configure
+  - make
+  - make install
+  - cd ..
 
 install:
   - Rscript -e 'install.packages("clpAPI", configure-args=list("--with-clp-include" = "/home/travis/build/rte-antares-rpackage/coin-Clp", "--with-clp-lib" = "/home/travis/build/rte-antares-rpackage/coin-Clp/lib"))'

@@ -15,4 +15,4 @@ before_install:
   - cd ..
 
 install:
-  - Rscript -e 'install.packages("clpAPI", configure-args=list("--with-clp-include" = "/home/travis/build/rte-antares-rpackage/coin-Clp", "--with-clp-lib" = "/home/travis/build/rte-antares-rpackage/coin-Clp/lib"))'
+  - Rscript -e 'install.packages("clpAPI", configure.args=list("--with-clp-include" = "/home/travis/build/rte-antares-rpackage/coin-Clp", "--with-clp-lib" = "/home/travis/build/rte-antares-rpackage/coin-Clp/lib"))'

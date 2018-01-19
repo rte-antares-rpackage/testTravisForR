@@ -2,17 +2,13 @@
 
 language: R
 cache: packages
-sudo: false
+sudo: required
 dist: trusty
 
-
 before_install:
-  - svn checkout https://projects.coin-or.org/svn/Clp/stable/1.16 coin-Clp
-  - cd coin-Clp
-  - ./configure
-  - make
-  - make install
-  - cd ..
+  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+  - sudo apt-get update
+  - sudo apt-get upgrade
 
 install:
   - Rscript -e 'install.packages("clpAPI", configure.args=list("--with-clp-include" = "/home/travis/build/rte-antares-rpackage/coin-Clp", "--with-clp-lib" = "/home/travis/build/rte-antares-rpackage/coin-Clp/lib"))'
